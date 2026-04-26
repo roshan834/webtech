@@ -1,0 +1,126 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 8rem 4rem 5rem;
+  overflow: hidden;
+}
+
+.hero__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 240, 200, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 200, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.hero__glow {
+  position: absolute;
+  top: 15%;
+  left: 35%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero__content {
+  position: relative;
+  max-width: 700px;
+  animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 240, 200, 0.08);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.35rem 1rem;
+  font-size: 0.78rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  margin-bottom: 2rem;
+}
+
+.hero__badge-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.25; }
+}
+
+.hero__content h1 {
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.hero__content h1 em {
+  color: var(--accent);
+  font-style: normal;
+}
+
+.hero__sub {
+  font-size: 1.1rem;
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 560px;
+  margin-bottom: 2.5rem;
+}
+
+.hero__btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero__stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.hero__stat-num {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.hero__stat-label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 7rem 1.5rem 4rem;
+  }
+  .hero__stats {
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,97 @@
+.portfolio {
+  padding: 6rem 4rem;
+  background: var(--bg2);
+}
+
+.portfolio__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.portfolio-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 240, 200, 0.3);
+}
+
+/* Thumbnails */
+.portfolio-card__thumb {
+  height: 180px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-card__thumb svg {
+  width: 64px;
+  height: 64px;
+  opacity: 0.35;
+  color: #e8eaf0;
+}
+
+.portfolio-card__thumb--blue   { background: linear-gradient(135deg, #0a1628, #0d2a4a); }
+.portfolio-card__thumb--green  { background: linear-gradient(135deg, #0a1a10, #0d3020); }
+.portfolio-card__thumb--purple { background: linear-gradient(135deg, #1a0a28, #2d0a45); }
+.portfolio-card__thumb--amber  { background: linear-gradient(135deg, #1a1000, #2d2000); }
+
+.portfolio-card__badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  background: rgba(0, 240, 200, 0.12);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+/* Card info */
+.portfolio-card__info {
+  padding: 1.35rem;
+}
+
+.portfolio-card__info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--text);
+}
+
+.portfolio-card__info p {
+  font-size: 0.83rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.portfolio-card__tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 0.9rem;
+}
+
+.portfolio-card__tags span {
+  font-size: 0.72rem;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 100px;
+  padding: 3px 10px;
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    padding: 4rem 1.5rem;
+  }
+}
