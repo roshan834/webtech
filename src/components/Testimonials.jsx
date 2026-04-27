@@ -6,7 +6,7 @@ const testimonials = [
     id: 1,
     stars: 5,
     quote:
-      '"WebTechGenZ transformed our entire IT setup within weeks. The cloud migration was flawless and the team was always available for support."',
+      '" WebTechGenZ transformed our entire IT setup within weeks. The cloud migration was flawless and the team was always available for support."',
     name: 'Rohit Patel',
     role: 'CTO, FinServe India',
     initials: 'RP',

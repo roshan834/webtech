@@ -1,4 +1,4 @@
-# WebTechGenZ IT Solutions — React Website
+#  WebTechGenZ IT Solutions — React Website
 
 A dark, tech-focused IT services website built with React JS.
 
@@ -46,7 +46,7 @@ npm run build
 ## Customisation Guide
 
 ### 1. Company Name & Branding
-- Replace `WebTechGenZ` in `Navbar.jsx`, `Footer.jsx`, and `public/index.html`
+- Replace ` WebTechGenZ` in `Navbar.jsx`, `Footer.jsx`, and `public/index.html`
 - Update the accent color (`--accent`) in `styles/global.css`
 
 ### 2. Contact Details
