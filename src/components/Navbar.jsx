@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <a href="#hero" className="navbar__logo">
-        Nexa<span>Core</span>
+        WebTechGen<span>Z</span>
       </a>
 
       <ul className={`navbar__links ${menuOpen ? 'open' : ''}`}>
